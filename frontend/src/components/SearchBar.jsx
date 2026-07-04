@@ -1,12 +1,20 @@
 import {useState} from "react";
+import api from "../services/api";
 function SearchBar(){
     const [company, setCompany]=useState("");
-    const handleAnalyze=()=>{
+    const handleAnalyze=async ()=>{
         if(!company.trim()){
             alert("Please enter a company name.");
             return;
         }
-        console.log(company);
+        try{
+            const response= await api.post("/analyze",{
+                company
+            });
+            console.log(response.data);
+        }catch (error){
+            console.log(error);
+        }
     };
     return(
         <div className="bg-white rounded-xl shadow-lg p-8 mt-10">

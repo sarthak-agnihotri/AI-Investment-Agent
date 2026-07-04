@@ -9,6 +9,14 @@ app.use(express.json());
 app.get("/",(req,res)=>{
     res.send("Investment Agent Backend Running");
 });
+app.post("/analyze",(req,res)=>{
+    const{company}=req.body;
+    res.json({
+        success: true,
+        company: company,
+        message: "Backend Connected Successfully"
+    });
+});
 
 const PORT=process.env.PORT || 5000;
 app.listen(PORT,()=>{
