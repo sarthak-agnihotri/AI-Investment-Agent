@@ -37,7 +37,7 @@ function SWOTCard({ analysis, darkMode }) {
         SWOT Analysis
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <SWOTSection
           title="💪 Strengths"

@@ -35,7 +35,7 @@ function CompanyCard({ data, darkMode }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
         <div>
           <p className="font-semibold">Ticker</p>
           <p>{profile.ticker}</p>

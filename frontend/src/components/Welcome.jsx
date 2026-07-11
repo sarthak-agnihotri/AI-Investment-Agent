@@ -1,39 +1,77 @@
 function Welcome({ darkMode }) {
   return (
     <div
-      className={`mt-16 rounded-xl shadow-lg p-12 text-center transition-colors duration-300 ${
+      className={`mt-10 sm:mt-16 rounded-xl shadow-lg p-6 sm:p-8 lg:p-12 text-center transition-colors duration-300 ${
         darkMode
           ? "bg-slate-800 text-white"
           : "bg-white text-gray-800"
       }`}
     >
-      <h2 className="text-4xl font-bold mb-6">
+      {/* Title */}
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
         📈 AI Investment Research Agent
       </h2>
 
-      <p className="text-xl mb-8">
+      {/* Subtitle */}
+      <p
+        className={`text-lg sm:text-xl mb-8 ${
+          darkMode ? "text-gray-300" : "text-gray-600"
+        }`}
+      >
         Search any company to receive an AI-powered investment analysis.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto">
+      {/* Features */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left max-w-4xl mx-auto">
+        <div className="flex items-center gap-3 text-lg">
+          <span>📊</span>
+          <span>Company Overview</span>
+        </div>
 
-        <div>📊 Company Overview</div>
+        <div className="flex items-center gap-3 text-lg">
+          <span>💡</span>
+          <span>AI Recommendation</span>
+        </div>
 
-        <div>💡 AI Recommendation</div>
+        <div className="flex items-center gap-3 text-lg">
+          <span>📈</span>
+          <span>Financial Metrics</span>
+        </div>
 
-        <div>📈 Financial Metrics</div>
+        <div className="flex items-center gap-3 text-lg">
+          <span>📰</span>
+          <span>Latest News</span>
+        </div>
 
-        <div>📰 Latest News</div>
+        <div className="flex items-center gap-3 text-lg">
+          <span>⚖</span>
+          <span>SWOT Analysis</span>
+        </div>
 
-        <div>⚖ SWOT Analysis</div>
-
-        <div>📄 PDF Report</div>
-
+        <div className="flex items-center gap-3 text-lg">
+          <span>📄</span>
+          <span>Download PDF Report</span>
+        </div>
       </div>
 
-      <p className="mt-10 text-gray-500">
-        Try searching Apple, Tesla, NVIDIA or Microsoft.
-      </p>
+      {/* Example Companies */}
+      <div
+        className={`mt-10 border-t pt-6 ${
+          darkMode ? "border-slate-600" : "border-gray-300"
+        }`}
+      >
+        <p
+          className={`text-sm sm:text-base ${
+            darkMode ? "text-gray-400" : "text-gray-500"
+          }`}
+        >
+          Try searching{" "}
+          <span className="font-semibold text-blue-500">Apple</span>,{" "}
+          <span className="font-semibold text-blue-500">Tesla</span>,{" "}
+          <span className="font-semibold text-blue-500">NVIDIA</span>, or{" "}
+          <span className="font-semibold text-blue-500">Microsoft</span>.
+        </p>
+      </div>
     </div>
   );
 }

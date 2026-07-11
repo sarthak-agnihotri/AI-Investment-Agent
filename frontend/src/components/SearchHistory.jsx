@@ -13,7 +13,7 @@ function SearchHistory({ history , darkMode, onSearch }) {
         🕘 Recent Searches
       </h2>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap justify-center sm:justify-start gap-3">
         {history.map((company, index) => (
           <button
   key={index}

@@ -45,7 +45,7 @@ useEffect(() => {
         darkMode={darkMode}
         setDarkMode={setDarkMode}/>
 
-      <main className="max-w-6xl mx-auto px-6">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6">
         <SearchBar setResult={handleResult} darkMode={darkMode} selectedCompany={selectedCompany}/>
         <SearchHistory history={history} darkMode={darkMode} onSearch={(company) => setSelectedCompany(company)}/>
         {result ? (<Dashboard data={result} darkMode={darkMode}/>) : (<Welcome darkMode={darkMode} />)}
