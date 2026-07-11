@@ -58,7 +58,7 @@ function SearchBar({ setResult, darkMode, selectedCompany }) {
         Search Company
       </h2>
 
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         <input
           type="text"
           placeholder="Example: Apple, Tesla, NVIDIA..."
@@ -69,18 +69,17 @@ function SearchBar({ setResult, darkMode, selectedCompany }) {
               handleAnalyze();
             }
           }}
-          className={`flex-1 border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 ${
-            darkMode
-              ? "bg-slate-700 border-slate-600 text-white placeholder-gray-400"
-              : "bg-white border-gray-300 text-black"
-          }`}
+          className={`w-full sm:flex-1 border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 ${
+  darkMode
+    ? "bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+    : "bg-white border-gray-300 text-black"
+}`}
         />
 
         <button
           onClick={() => handleAnalyze()}
           disabled={loading}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed"
-        >
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg w-full sm:w-auto disabled:bg-gray-400 disabled:cursor-not-allowed">
           {loading ? "Analyzing..." : "Analyze"}
         </button>
       </div>
